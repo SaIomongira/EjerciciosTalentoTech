@@ -29,9 +29,12 @@ public class Funciones {
         }
 
         System.out.println(cadena+texto+cadena);
-
-
     }
+
+    public static double raizCubica(int a) {
+        return Math.cbrt(a);
+    }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -45,6 +48,7 @@ public class Funciones {
             System.out.println("Ejercicio 3");
             System.out.println("Ejercicio 4");
             System.out.println("Ejercicio 5");
+            System.out.println("Ejercicio 6");
             System.out.println("0: Salir");
             int opcion = sc.nextInt();
             switch(opcion){
@@ -73,6 +77,10 @@ public class Funciones {
                     rotulo();
                     break;
                 case 5:
+                    break;
+                case 6:
+                    double raizC = raizCubica(10);
+                    System.out.println(raizC);
                     break;
                 default:
                     System.out.println("Opcion no valida");
