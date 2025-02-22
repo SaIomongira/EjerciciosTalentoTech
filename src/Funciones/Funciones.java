@@ -12,7 +12,15 @@ public class Funciones {
         return (float) a /b;
     }
 
-    public static float multiplicacion(int a, int b) {}
+    public static void letraRepetida(String a, int b) {
+        for (int i = 0; i < b; i++) {
+            System.out.println(a);
+        }
+    }
+
+    public static void rotulo(int a, int b) {
+
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -43,17 +51,18 @@ public class Funciones {
                     System.out.println("La suma es: " + div);
                     break;
                 case 3:
-
-                    System.out.println("Consignando......");
-                    System.out.println("Consignacion exitosa");
-
+                    System.out.println("Ingrese una letra");
+                    String letra = sc.next();
+                    System.out.println("Ingrese la cantidad de veces que la desea repetir");
+                    int repetir = sc.nextInt();
+                    letraRepetida(letra,repetir);
                     break;
                 case 4:
                     System.out.println("Gracias ae");
                     System.exit(0);
                     break;
                 default:
-
+                    System.out.println("Opcion no valida");
                     break;
             }
         }
