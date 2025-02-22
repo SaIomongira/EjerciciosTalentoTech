@@ -1,24 +1,23 @@
 package Loops;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class Ejercicio3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double i = 0, nMaterias = 7, contador=0;
-        double promedio=0,nota=0;
+        int numeroNotas = 7, i = 1, contador = 0;
+        float promedio = 0;
 
-        while(i<=nMaterias){
-            System.out.println("Ingrese la"+i+" nota");
-            int notas  = sc.nextInt();
+        while(i<=numeroNotas){
+            System.out.print("Ingrese la nota numero "+i+" :");
+            int nota = sc.nextInt();
+            contador+=nota;
             i++;
-            contador+=notas;
-
         }
-        promedio= (double) contador /nMaterias;
+        promedio= (float) contador /numeroNotas;
 
-        System.out.println("El promedio: "+promedio);
-    }
-
+        System.out.println("El promedio es: "+promedio);
     }
 }
