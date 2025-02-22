@@ -35,16 +35,16 @@ public class CuentaBanco {
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese su Nombre: ");
         String usuario = sc.nextLine();
-
+        System.out.println();
         while(true){
             System.out.println("Hola Usuario " + usuario+"\n");
+            System.out.println("---BIENVENIDO AL BANCO DE JOSELITO CARNAVAL---");
             System.out.println("¿Que quieres hacer el dia de hoy?\n");
             System.out.println("1: Consultar Saldo");
             System.out.println("2: Hacer Retiro");
             System.out.println("3: Hacer Consignación");
             System.out.println("4: Salir");
             int opcion = sc.nextInt();
-
             switch(opcion){
                 case 1:
                     double saldo = consultarSaldo();
@@ -61,12 +61,13 @@ public class CuentaBanco {
 
                     break;
                 case 4:
+                    System.out.println("Gracias ae");
                     System.exit(0);
                     break;
+                default:
+
+                    break;
             }
-
-            System.out.println("Muchas gracias por utilizar nuestros Servicios");
         }
-
     }
 }
