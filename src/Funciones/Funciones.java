@@ -18,7 +18,18 @@ public class Funciones {
         }
     }
 
-    public static void rotulo(int a, int b) {
+    public static void rotulo() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese una cadena de texto");
+        StringBuilder cadena = new StringBuilder();
+        String texto = sc.nextLine();
+
+        for (int i = 0; i < texto.length(); i++) {
+            cadena.append("-");
+        }
+
+        System.out.println(cadena+texto+cadena);
+
 
     }
 
@@ -33,6 +44,7 @@ public class Funciones {
             System.out.println("Ejercicio 2");
             System.out.println("Ejercicio 3");
             System.out.println("Ejercicio 4");
+            System.out.println("Ejercicio 5");
             System.out.println("0: Salir");
             int opcion = sc.nextInt();
             switch(opcion){
@@ -58,8 +70,9 @@ public class Funciones {
                     letraRepetida(letra,repetir);
                     break;
                 case 4:
-                    System.out.println("Gracias ae");
-                    System.exit(0);
+                    rotulo();
+                    break;
+                case 5:
                     break;
                 default:
                     System.out.println("Opcion no valida");
